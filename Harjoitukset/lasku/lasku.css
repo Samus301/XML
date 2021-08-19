@@ -1,0 +1,25 @@
+lasku {
+    background-color: white;
+    text-align: left;
+    font: medium;
+    padding: 1em;
+    /*font-family: 'comic sans MS';*/
+}
+
+yleistiedot {
+    display: block;
+    text-align: right;
+    padding-left: 40%;
+    margin: 0 auto;
+    white-space: pre;
+    border: 1px solid black;
+}
+
+tuotteet {
+    display: block;
+    text-align: right;
+    padding-left: 40%;
+    margin: 0 auto;
+    white-space: pre;
+    border: 1px solid black;
+}

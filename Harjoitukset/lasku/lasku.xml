@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet type = "text/css" href="lasku.css"?>
+<lasku>
+    <yleistiedot>
+        <laskunro>346</laskunro>
+        <viitenro>1256</viitenro>
+        <laskupvm>19.8.2021</laskupvm>
+        <erapaiva>2.9.2021</erapaiva>
+        <toimituspvm>21.8.2021</toimituspvm>
+        <toimitustapa>DPP</toimitustapa>
+        <maksuehto>14 pv netto</maksuehto>
+        <viitteemme>Samu Makinen</viitteemme>
+        <viitteenne>Veeti Koskinen</viitteenne>
+        <ostajantilausnro>34651</ostajantilausnro>
+        <viivätyskorko>42069%</viivätyskorko>
+        <huomautusaika>10pv</huomautusaika>
+    </yleistiedot>
+
+    <tuotteet>
+        <tuote id="123">
+            <nimike>Discord Nitro 1kk</nimike>
+            <hinta>10,00</hinta>
+        </tuote>
+    </tuotteet>
+
+</lasku>

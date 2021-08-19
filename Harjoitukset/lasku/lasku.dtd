@@ -1,0 +1,23 @@
+<!DOCTYPE lasku[
+<!ELEMENT lasku (yleistiedot, tuotteet)>
+
+<!ELEMENT yleistiedot (laskunro, viitenro, laskupvm, erapaiva, toimituspvm, toimitustapa, maksuehto, viitteemme, viitteenne, ostajantilausnro, viivätyskorko, huomautusaika)>
+
+<!ELEMENT laskunro (#PCDATA)>
+<!ELEMENT viitenro (#PCDATA)>
+<!ELEMENT laskupvm (#PCDATA)>
+<!ELEMENT erapaiva (#PCDATA)>
+<!ELEMENT toimituspvm (#PCDATA)>
+<!ELEMENT toimitustapa (#PCDATA)>
+<!ELEMENT maksuehto (#PCDATA)>
+<!ELEMENT viitteemme (#PCDATA)>
+<!ELEMENT viitteenne (#PCDATA)>
+<!ELEMENT ostajantilausnro (#PCDATA)>
+<!ELEMENT viivätyskorko (#PCDATA)>
+<!ELEMENT huomautusaika (#PCDATA)>
+
+<!ELEMENT tuotteet (tuote+)>
+<!ELEMENT tuote (nimike, hinta)>
+<!ELEMENT nimike (#PCDATA)>
+<!ELEMENT hinta (#PCDATA)>
+]>
