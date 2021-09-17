@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version='2.0'>
+<channel>
+<news id='1'>
+<title>News</title>
+<description>News</description>
+<link>news</link>
+<published>news</published>
+</news>
+</channel>
+</rss>
+<rss version='2.0'>
+<channel>
+<news id='2'>
+<title>news2</title>
+<description>news2</description>
+<link>news2</link>
+<published>news2</published>
+</news>
+</channel>
+</rss>
