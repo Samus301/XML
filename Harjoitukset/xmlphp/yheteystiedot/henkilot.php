@@ -10,7 +10,7 @@ $postinumero = $_POST["postinumero"];
 
 $myXML = "yhteystiedot.xml";
 $fh = fopen($myXML, 'w') or die("can't open file");
-fwrite($fh, "<?xml version='2.0' encoding='UTF-8'?>\n");
+fwrite($fh, "<?xml version='1.0' encoding='UTF-8'?>\n");
 
     fwrite($fh, "<tiedot>". "\n");
         fwrite($fh, "<nimi>" . $name . "</nimi>\n");
@@ -22,6 +22,23 @@ fwrite($fh, "<?xml version='2.0' encoding='UTF-8'?>\n");
     fclose($fh);
     echo "File " . $myXML . " written!";
 }
+?>
+
+<?php
+$xmlDoc = new DOMDocument();
+$xmlDoc->load("yhteystiedot.xml");
+$x = $xmlDoc->documentElement;
+$nimet = $x->getElementsByTagName("nimi");
+$name = $nimet->item(0)->nodeValue;
+
+$lahiosoitteet = $x->getElementsByTagName("lahiosoite");
+$osoite = $lahiosoitteet->item(0)->nodeValue;
+
+$postiosoitteet = $x->getElementsByTagName("postiosoite");
+$postiosoite = $postiosoitteet->item(0)->nodeValue;
+
+$postinumerot = $x->getElementsByTagName("postinumero");
+$postinumero = $postinumerot->item(0)->nodeValue;
 ?>
 
 <form name="tiedot" action="" method="post">
