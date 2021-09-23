@@ -1,43 +1,42 @@
 <?php
-$xmlDoc = new DOMDocument();
-$xmlDoc->load("yhteystiedot.xml");
-$x = $xmlDoc->documentElement;
-// haetaan elementin 'nimi' tiedot:
-$nimet = $x->getElementsByTagName( "nimi" );
-$nimi = $nimet->item(0)->nodeValue;
 
-$osoitteet = $x->getElementsByTagName( "lahiosoite" );
-$osoite = $osoitteet->item(0)->nodeValue;
-
-$posoitteet = $x->getElementsByTagName( "postiosoite" );
-$posoite = $posoitteet->item(0)->nodeValue;
-
-$pnumerot = $x->getElementsByTagName( "postinumero" );
-$pnumero = $pnumerot->item(0)->nodeValue;
+if(isset($_POST["nimi"], $_POST["lahiosoite"], $_POST["postiosoite"], $_POST["postinumero"]))
+{
+$name = $_POST["nimi"];
+$osoite = $_POST["lahiosoite"];
+$postiosoite = $_POST["postiosoite"];
+$postinumero = $_POST["postinumero"];
 
 
+$myXML = "yhteystiedot.xml";
+$fh = fopen($myXML, 'w') or die("can't open file");
+fwrite($fh, "<?xml version='2.0' encoding='UTF-8'?>\n");
 
+    fwrite($fh, "<tiedot>". "\n");
+        fwrite($fh, "<nimi>" . $name . "</nimi>\n");
+        fwrite($fh, "<lahiosoite>" . $osoite. "</lahiosoite>\n");
+        fwrite($fh, "<postiosoite>" . $postiosoite. "</postiosoite>\n");
+        fwrite($fh, "<postinumero>" . $postinumero . "</postinumero>\n");
+    fwrite($fh, "</tiedot>". "\n");   
+    
+    fclose($fh);
+    echo "File " . $myXML . " written!";
+}
 ?>
 
 <form name="tiedot" action="" method="post">
-<label for "nimi">Nimi</label><br />
-<input type='text' name='' /><br />
+<label for="nimi">Nimi</label><br />
+<input type="text" name="nimi" value="<?=$name?>"><br />
 
-<input type='text' name='' /><br />
-<input type='text' name='' /><br />
-<input type='text' name='' /><br />
+<label for="lahiosoite">Lähiosoite</label><br />
+<input type="text" name="lahiosoite" value="<?=$osoite?>"><br />
+
+<label for="postiosoite">Postiosoite</label><br />
+<input type="text" name="postiosoite" value="<?=$postiosoite?>" ><br />
+
+<label for="postinumero">Postinumero</label><br />
+<input type="text" name="postinumero" value="<?=$postinumero?>"><br />
+
 <input type='submit'value='Submit'/>
 </form>
 
-
-
-<!-- echo "Nimi: <input type='text'name='$nimi' /><br />";
-echo "Lahiosoite: <input type='text'name='$osoite' /><br />";
-echo "Postiosoite: <input type='text'name='$posoite' /><br />";
-echo "Postinumero: <input type='text'name='$pnumero' /><br />";
-
-echo "<input type='submit'name='Submit'/>" -->
-
-
-
-?>
