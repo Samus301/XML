@@ -14,23 +14,21 @@ $connection->exec("SET NAMES utf8");
 
 $query = $connection->prepare("SELECT * FROM news");
 $query->execute();
-
-
-while($row = $query->fetch()) {
     fwrite($fh, "<rss version='2.0'>". "\n");
     fwrite($fh, "<channel>". "\n");
-    fwrite($fh, "<news id='" . $row ['idNews'] . "'>\n");
+
+while($row = $query->fetch()) {
+    
+    fwrite($fh, "<item id='" . $row ['idNews'] . "'>\n");
     fwrite($fh, "<title>" . $row ['Title'] . "</title>\n");
     fwrite($fh, "<description>" . $row ['Description'] . "</description>\n");
     fwrite($fh, "<link>" . $row ['Link'] . "</link>\n");
     fwrite($fh, "<published>" . $row ['Published'] . "</published>\n");
-    fwrite($fh, "</news>". "\n");
-    fwrite($fh, "</channel>". "\n");
-    fwrite($fh, "</rss>". "\n");
-    
+    fwrite($fh, "</item>". "\n");
 }
 
-
+fwrite($fh, "</channel>". "\n");
+fwrite($fh, "</rss>". "\n");
 
 fclose($fh);
 echo "File " . $myXML . " written!";

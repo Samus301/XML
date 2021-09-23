@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+
+<ruoka>
+<nimi>Maa-artisokkakeitto</nimi>
+<hinta>20.50</hinta>
+<tyyppi>Alkuruoka</tyyppi>
+</ruoka>
+
+<ruoka>
+<nimi>Paahdettua taimen</nimi>
+<hinta>19.90</hinta>
+<tyyppi>Pääruoka</tyyppi>
+</ruoka>
+
+<ruoka>
+<nimi>Crème brûlé</nimi>
+<hinta>12.50</hinta>
+<tyyppi>Jälkiruoka</tyyppi>
+</ruoka>
+
+<ruoka>
+<nimi>Tauno Palon kermasipulipihvi</nimi>
+<hinta>27.90</hinta>
+<tyyppi>Pääruoka</tyyppi>
+</ruoka>
+
+<ruoka>
+<nimi>Testi</nimi>
+<hinta>56456</hinta>
+<tyyppi>Alkuruoka</tyyppi>
+</ruoka>
+
+</menu>
