@@ -6,6 +6,7 @@ function calculate() {
     let mac = document.getElementById("txtmac").value;
     let pc = document.getElementById("txtpc").value;
     let chrome = document.getElementById("txtchrome").value;
+
     let kulutus = Math.round(0.03*mac*6*100)/100 + Math.round(0.03*pc*6*100)/100 + Math.round(0.01*chrome*6*100)/100;
     document.getElementById("txtKulutus1").innerHTML = kulutus;
 
@@ -16,6 +17,18 @@ function calculate() {
    
     let verkko1 = 100 - aurinko1;
     document.getElementById("txtVerkko1").innerHTML = Math.round(verkko1) + "%";
+
+  
+    let kulutus2 = Math.round(0.03*mac*6*100)/100 + Math.round(0.03*pc*6*100)/100 + Math.round(0.01*chrome*6*100)/100;
+    document.getElementById("txtKulutus2").innerHTML = kulutus2;
+
+    let tuotanto2 = document.getElementById("txtTuotanto2").innerHTML;
+    let aurinko2 = tuotanto2 / kulutus2 * 100;
+    document.getElementById("txtAurinko2").innerHTML = Math.round(aurinko2) + "%";
+
+   
+    let verkko2 = 100 - aurinko2;
+    document.getElementById("txtVerkko2").innerHTML = Math.round(verkko2) + "%";
 }
 
 function loadDoc() {

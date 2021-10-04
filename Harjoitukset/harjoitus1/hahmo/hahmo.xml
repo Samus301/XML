@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<character>
+    <info>
+        <name>Samus301</name>
+        <gender>Male</gender>
+        <class>Sniper</class>
+    </info>
+
+    <stats>
+        <health>max hp: 100</health>
+        <defense>20</defense>
+        <strength>70</strength>
+        <agility>50</agility>
+        <accuracy>130</accuracy>
+    </stats>
+
+    <abilities>
+        <main>Stealth</main>
+        <secondary>Smoke</secondary>
+        <passive>Faster movement speed when getting shot</passive>
+    </abilities>
+
+    <equipment>
+        <armor>Ghillie</armor>
+        <weapons>Sniper</weapons>
+        <consumables>
+
+            <food>Bread</food>
+            <potions>Health</potions>
+
+        </consumables>
+    </equipment>
+        
+</character>
